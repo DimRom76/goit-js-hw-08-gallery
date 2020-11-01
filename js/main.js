@@ -40,6 +40,28 @@ const createLiElement = () => {
 
 createLiElement();
 
+// Альтернативное создание
+// const createItemGallery = arrImg => {
+//   const itemLiRef = document.createElement('li');
+//   itemLiRef.classList.add('gallery__item');
+//
+//   const linkBigimgRef = document.createElement('a');
+//   linkBigimgRef.classList.add('gallery__link');
+//   linkBigimgRef.setAttribute('href', arrImg.original);
+//
+//   const smallImgRef = document.createElement('img');
+//   smallImgRef.classList.add('gallery__image');
+//   smallImgRef.setAttribute('src', arrImg.preview);
+//   smallImgRef.setAttribute('data-source', arrImg.original);
+//   smallImgRef.setAttribute('alt', arrImg.description);
+//
+//   itemLiRef.appendChild(linkBigimgRef);
+//   linkBigimgRef.appendChild(smallImgRef);
+//   return itemLiRef;
+// };
+//
+// refs.jsGallery.append(...galleryItems.map(arrImg => createItemGallery(arrImg)));
+
 function setBigImg(src, alt, id) {
   refs.modalImage.setAttribute('src', src);
   refs.modalImage.setAttribute('alt', alt);
