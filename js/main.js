@@ -89,7 +89,10 @@ function clickElementGallery(event) {
 function onCloseModal() {
   window.removeEventListener('keydown', onButtonKeyPress);
 
+  //чистим атрибуты чтобы не мигали артефакты при закрытии и повторном открытии модалки
+  refs.modalImage.setAttribute('alt', '');
   refs.modalImage.setAttribute('src', '');
+
   refs.modal.classList.remove('is-open');
 }
 
